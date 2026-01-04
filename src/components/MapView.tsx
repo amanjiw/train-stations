@@ -3,14 +3,13 @@
 /////////////////////////////////////////////////////////////////
 
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
 // HOOKS
 import useMapView from "../hooks/useMapiew";
 
 // COMPONENTS
 import MapFocus from "./MapFocus";
-import DetailsPopup from "./DetailsPopup";
 import VehicleList from "./TrainList";
 
 // DATA
@@ -61,7 +60,7 @@ export default function MapView() {
 		handleListItemClick,
 	} = useMapView();
 
-    const filteredTrains = useFilter((state) => state.filteredTrains);
+	const filteredTrains = useFilter((state) => state.filteredTrains);
 
 	return (
 		<div className="flex h-screen">
@@ -96,14 +95,7 @@ export default function MapView() {
 							eventHandlers={{
 								click: () => setSelectedTrain(vehicle),
 							}}
-						>
-							{/* <DetailsPopup
-								fuelLevel={vehicle?.fuelLevel}
-								fuelType={vehicle?.fuelType}
-								address={vehicle?.address}
-								plate={vehicle?.plate}
-							/> */}
-						</Marker>
+						></Marker>
 					))}
 				</MapContainer>
 			</div>

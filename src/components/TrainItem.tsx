@@ -1,12 +1,5 @@
 import type { FC } from "react";
 
-import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "@/components/ui/accordion";
-
 // TYPES
 import type { TTrainItemProps } from "@/types/Trains";
 import { Building2, TrainFrontTunnel } from "lucide-react";
